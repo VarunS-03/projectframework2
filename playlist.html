@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist — Student Music Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.15" stroke="#6c63ff" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="9" stroke="#6c63ff" stroke-width="1.2" fill="none"/>
+        <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+      </svg>
+      <span>Music<em>Hub</em></span>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="playlist.html" class="active">Playlist</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-btn"><span id="themeIcon">🌙</span></button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <div class="page-hero">
+      <h1>🎵 Full Playlist</h1>
+      <p>Every track in one place. Filter by mood, save your favourites.</p>
+    </div>
+
+    <!-- Mood filter -->
+    <div class="filter-pills" style="margin-bottom:28px;">
+      <button class="pill active" data-mood="all">✦ All</button>
+      <button class="pill" data-mood="focus">🎯 Focus</button>
+      <button class="pill" data-mood="chill">😌 Chill</button>
+      <button class="pill" data-mood="energy">⚡ Energy</button>
+      <button class="pill" data-mood="sleep">🌙 Sleep</button>
+    </div>
+
+    <!-- COMPLEX TABLE -->
+    <div class="table-wrap">
+      <table class="playlist-table" id="playlistTable">
+        <caption>Student Music Hub — Curated Playlist · Summer 2025</caption>
+
+        <thead>
+          <tr>
+            <th rowspan="2">#</th>
+            <th rowspan="2">Track</th>
+            <!-- colspan: "Details" header spans Genre + Mood columns -->
+            <th colspan="2">Details</th>
+            <th rowspan="2">Duration</th>
+            <th rowspan="2">Save</th>
+          </tr>
+          <tr>
+            <!-- These belong under the "Details" colspan above -->
+            <th>Genre</th>
+            <th>Mood</th>
+          </tr>
+        </thead>
+
+        <tbody id="playlistBody">
+          <tr data-mood="focus">
+            <td class="track-num">01</td>
+            <td>
+              <div class="track-title-cell">
+                <strong>Deep Focus Flow</strong>
+                <span>Lo-fi Study Beats</span>
+              </div>
+            </td>
+            <td>Lo-Fi</td>
+            <td><span class="badge focus-badge">🎯 Focus</span></td>
+            <td>3:42</td>
+            <td><button class="fav-btn" data-id="1">♡</button></td>
+          </tr>
+          <tr data-mood="chill">
+            <td class="track-num">02</td>
+            <td>
+              <div class="track-title-cell">
+                <strong>Evening Chill</strong>
+                <span>Ambient Collective</span>
+              </div>
+            </td>
+            <td>Ambient</td>
+            <td><span class="badge chill-badge">😌 Chill</span></td>
+            <td>4:15</td>
+            <td><button class="fav-btn" data-id="2">♡</button></td>
+          </tr>
+          <tr data-mood="energy">
+            <td class="track-num">03</td>
+            <td>
+              <div class="track-title-cell">
+                <strong>Morning Boost</strong>
+                <span>Upbeat Studio</span>
+              </div>
+            </td>
+            <td>Pop</td>
+            <td><span class="badge energy-badge">⚡ Energy</span></td>
+            <td>3:28</td>
+            <td><button class="fav-btn" data-id="3">♡</button></td>
+          </tr>
+          <tr data-mood="sleep">
+            <td class="track-num">04</td>
+            <td>
+              <div class="track-title-cell">
+                <strong>Dreamscape</strong>
+                <span>Sleep Sounds Co.</span>
+              </div>
+            </td>
+            <td>Nature</td>
+            <td><span class="badge sleep-badge">🌙 Sleep</span></td>
+            <td>6:00</td>
+            <td><button class="fav-btn" data-id="4">♡</button></td>
+          </tr>
+          <tr data-mood="focus">
+            <td class="track-num">05</td>
+            <td>
+              <div class="track-title-cell">
+                <strong>Piano Study</strong>
+                <span>Classical Waves</span>
+              </div>
+            </td>
+            <td>Classical</td>
+            <td><span class="badge focus-badge">🎯 Focus</span></td>
+            <td>5:10</td>
+            <td><button class="fav-btn" data-id="5">♡</button></td>
+          </tr>
+          <tr data-mood="chill">
+            <td class="track-num">06</td>
+            <td>
+              <div class="track-title-cell">
+                <strong>Jazz Café</strong>
+                <span>Smooth Jazz FM</span>
+              </div>
+            </td>
+            <td>Jazz</td>
+            <td><span class="badge chill-badge">😌 Chill</span></td>
+            <td>4:52</td>
+            <td><button class="fav-btn" data-id="6">♡</button></td>
+          </tr>
+          <tr data-mood="energy">
+            <td class="track-num">07</td>
+            <td>
+              <div class="track-title-cell">
+                <strong>Power Hour</strong>
+                <span>Workout Vibes</span>
+              </div>
+            </td>
+            <td>Electronic</td>
+            <td><span class="badge energy-badge">⚡ Energy</span></td>
+            <td>3:55</td>
+            <td><button class="fav-btn" data-id="7">♡</button></td>
+          </tr>
+          <tr data-mood="focus">
+            <td class="track-num">08</td>
+            <td>
+              <div class="track-title-cell">
+                <strong>Rain &amp; Coffee</strong>
+                <span>Cozy Sounds</span>
+              </div>
+            </td>
+            <td>Ambient</td>
+            <td><span class="badge focus-badge">🎯 Focus</span></td>
+            <td>7:30</td>
+            <td><button class="fav-btn" data-id="8">♡</button></td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <!-- colspan="6" spans all 6 columns in the footer row -->
+            <td colspan="6" class="tfoot-note">
+              ✦ All tracks are royalty-free and curated for student use.
+              &nbsp;|&nbsp; ❤️ <span id="favCount">0</span> saved
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="fav-strip" id="favStrip">
+      <span>❤️</span>
+      <span id="favCounter">0</span>
+      <span>songs in your favourites</span>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.2" stroke="#6c63ff" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+        </svg>
+        <span>Music<em>Hub</em></span>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Student Music Hub</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

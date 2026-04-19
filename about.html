@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Student Music Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.15" stroke="#6c63ff" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="9" stroke="#6c63ff" stroke-width="1.2" fill="none"/>
+        <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+      </svg>
+      <span>Music<em>Hub</em></span>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-btn"><span id="themeIcon">🌙</span></button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <div class="page-hero">
+      <h1>About Student Music Hub</h1>
+      <p>A passion project born from late-night study sessions and a desperate need for the right music.</p>
+    </div>
+
+    <!-- STORY SECTION -->
+    <section class="about-story">
+      <div class="story-img">
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop"
+          alt="Students studying with headphones in a campus library"
+          loading="lazy"
+        >
+        <!-- SVG decorative shape overlay -->
+        <svg class="story-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#6c63ff" opacity="0.12"
+            d="M46.5,-60.2C58.9,-51.2,67,-35.5,70.8,-18.6C74.6,-1.7,74.2,16.4,66.5,30.7
+               C58.9,45,44.1,55.5,28.1,62.1C12.1,68.7,-5.1,71.3,-22.6,67.2
+               C-40,63.1,-57.7,52.2,-66.2,36.8C-74.6,21.4,-73.8,1.5,-68,-16
+               C-62.2,-33.5,-51.3,-48.6,-37.8,-57.4C-24.3,-66.3,-8.1,-68.9,7.5,-67.9
+               C23.1,-66.9,34.1,-69.2,46.5,-60.2Z"
+            transform="translate(100 100)"/>
+        </svg>
+      </div>
+      <div class="story-text">
+        <span class="eyebrow">Our Story</span>
+        <h2>Started in a Dorm Room</h2>
+        <p>
+          It began during exam season — too distracted by lyrics, too bored by silence,
+          and tired of spending 20 minutes searching for "the right playlist" instead of studying.
+        </p>
+        <p>
+          Student Music Hub was built to solve exactly that. One place, mood-matched, no ads,
+          no accounts, no friction. Just open and press play.
+        </p>
+        <a href="contact.html" class="btn-primary">Share Your Feedback</a>
+      </div>
+    </section>
+
+    <!-- VALUES: 3 cards -->
+    <section class="values-section">
+      <div class="section-header">
+        <h2 class="section-title">What We Stand For</h2>
+      </div>
+      <div class="values-grid">
+
+        <div class="value-card">
+          <!-- SVG icon: headphone -->
+          <div class="value-icon">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <circle cx="24" cy="20" r="14" fill="none" stroke="#6c63ff" stroke-width="2.5"/>
+              <rect x="8"  y="26" width="6"  height="10" rx="3" fill="#6c63ff"/>
+              <rect x="34" y="26" width="6"  height="10" rx="3" fill="#6c63ff"/>
+              <line x1="8" y1="30" x2="8" y2="24" stroke="#6c63ff" stroke-width="2"/>
+              <line x1="40" y1="30" x2="40" y2="24" stroke="#6c63ff" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Student First</h3>
+          <p>Every design and curation decision is made with one user in mind — the student sitting at 2 AM with a deadline.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <circle cx="24" cy="24" r="18" fill="none" stroke="#43b89c" stroke-width="2.5"/>
+              <path d="M16 24 L22 30 L32 18" stroke="#43b89c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Zero Friction</h3>
+          <p>No sign-up. No premium tier. No ads. Open the page and your music is there — exactly as it should be.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <path d="M24 8 L28 18 L39 19 L31 27 L33 38 L24 33 L15 38 L17 27 L9 19 L20 18 Z"
+                    fill="none" stroke="#f5a623" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Mood-Matched</h3>
+          <p>Science-backed curation. Focus tracks avoid lyrics. Sleep tracks stay below 60 BPM. Every choice is intentional.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TEAM SECTION with image + details -->
+    <section class="team-section">
+      <div class="section-header">
+        <h2 class="section-title">Who Made This</h2>
+        <p class="section-sub">A solo project with a lot of late-night coffee.</p>
+      </div>
+
+      <div class="team-card">
+        <img
+          src="https://i.pravatar.cc/180?img=12"
+          alt="Developer profile photo"
+          class="team-photo"
+          loading="lazy"
+        >
+        <div class="team-info">
+          <h3>Varun — Developer &amp; Curator</h3>
+          <p class="team-role">B.Tech CSE · Amrita Vishwa Vidyapeetham, Coimbatore</p>
+          <p>
+            A third-semester student who loves building things as much as listening to music.
+            This project is part of <strong>23CSE113 — User Interface Design</strong>,
+            but the idea has been in the notes app for a while.
+          </p>
+          <p>
+            When not coding, usually found in the library — ironically, with headphones on.
+          </p>
+          <div class="team-links">
+            <a href="https://github.com" target="_blank" rel="noopener" class="team-link">🐙 GitHub</a>
+            <a href="contact.html" class="team-link">✉️ Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUMBERS ROW -->
+    <section class="numbers-row">
+      <div class="number-box">
+        <strong>8</strong>
+        <span>Curated Tracks</span>
+      </div>
+      <div class="number-box">
+        <strong>4</strong>
+        <span>Study Moods</span>
+      </div>
+      <div class="number-box">
+        <strong>0</strong>
+        <span>Ads. Ever.</span>
+      </div>
+      <div class="number-box">
+        <strong>100%</strong>
+        <span>Free Forever</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.2" stroke="#6c63ff" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+        </svg>
+        <span>Music<em>Hub</em></span>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Student Music Hub</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Music Hub — Your Study Soundtrack</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-logo">
+      <!-- SVG: vinyl record icon -->
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.15" stroke="#6c63ff" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="9" stroke="#6c63ff" stroke-width="1.2" fill="none"/>
+        <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+        <path d="M16 1 A15 15 0 0 1 31 16" stroke="#6c63ff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Music<em>Hub</em></span>
+    </div>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg-circles">
+      <span class="circle c1"></span>
+      <span class="circle c2"></span>
+      <span class="circle c3"></span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">🎧 Curated for Students</div>
+      <h1>Find Your Perfect<br><span class="gradient-text">Study Soundtrack</span></h1>
+      <p>Mood-matched music for focus, relaxation, and energy. No ads. No distractions. Just flow.</p>
+      <div class="hero-btns">
+        <a href="#songs" class="btn-primary">Explore Music</a>
+        <a href="playlist.html" class="btn-ghost">Full Playlist →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>8+</strong><span>Tracks</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>4</strong><span>Moods</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>Free</strong><span>Forever</span></div>
+      </div>
+    </div>
+    <!-- Canvas wave animation -->
+    <div class="hero-visual">
+      <canvas id="waveCanvas" width="420" height="220" aria-label="Audio waveform animation"></canvas>
+    </div>
+  </section>
+
+  <!-- ===== MOOD FILTER ===== -->
+  <section class="filter-section" id="songs">
+    <div class="section-header">
+      <h2 class="section-title">Browse by Mood</h2>
+      <p class="section-sub">What are you feeling right now?</p>
+    </div>
+    <div class="filter-pills">
+      <button class="pill active" data-mood="all">✦ All</button>
+      <button class="pill" data-mood="focus">🎯 Focus</button>
+      <button class="pill" data-mood="chill">😌 Chill</button>
+      <button class="pill" data-mood="energy">⚡ Energy</button>
+      <button class="pill" data-mood="sleep">🌙 Sleep</button>
+    </div>
+  </section>
+
+  <!-- ===== MUSIC CARDS ===== -->
+  <section class="cards-section">
+    <div class="cards-grid" id="cardsGrid">
+
+      <article class="music-card" data-mood="focus">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=220&fit=crop" alt="Deep Focus Flow album art" loading="lazy">
+          <button class="fav-btn" data-id="1" aria-label="Add to favourites">♡</button>
+          <div class="mood-pill focus-pill">🎯 Focus</div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">Lo-Fi Beats</div>
+          <h3>Deep Focus Flow</h3>
+          <p>Slow, steady rhythms for sustained concentration sessions.</p>
+          <audio controls class="card-audio" preload="none">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+      <article class="music-card" data-mood="chill">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=220&fit=crop" alt="Evening Chill album art" loading="lazy">
+          <button class="fav-btn" data-id="2" aria-label="Add to favourites">♡</button>
+          <div class="mood-pill chill-pill">😌 Chill</div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">Ambient</div>
+          <h3>Evening Chill</h3>
+          <p>Soft textures for winding down after a long lecture day.</p>
+          <audio controls class="card-audio" preload="none">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+      <article class="music-card" data-mood="energy">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=220&fit=crop" alt="Morning Boost album art" loading="lazy">
+          <button class="fav-btn" data-id="3" aria-label="Add to favourites">♡</button>
+          <div class="mood-pill energy-pill">⚡ Energy</div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">Upbeat Pop</div>
+          <h3>Morning Boost</h3>
+          <p>High-energy tracks to fuel your most productive hours.</p>
+          <audio controls class="card-audio" preload="none">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+      <article class="music-card" data-mood="sleep">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1446057032654-9d8885db76c6?w=400&h=220&fit=crop" alt="Dreamscape album art" loading="lazy">
+          <button class="fav-btn" data-id="4" aria-label="Add to favourites">♡</button>
+          <div class="mood-pill sleep-pill">🌙 Sleep</div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">Nature Sounds</div>
+          <h3>Dreamscape</h3>
+          <p>Gentle drones and rain for deep, restorative rest.</p>
+          <audio controls class="card-audio" preload="none">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+      <article class="music-card" data-mood="focus">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=220&fit=crop" alt="Piano Study album art" loading="lazy">
+          <button class="fav-btn" data-id="5" aria-label="Add to favourites">♡</button>
+          <div class="mood-pill focus-pill">🎯 Focus</div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">Classical</div>
+          <h3>Piano Study</h3>
+          <p>Timeless piano pieces with zero lyrical distraction.</p>
+          <audio controls class="card-audio" preload="none">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+      <article class="music-card" data-mood="chill">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=220&fit=crop" alt="Jazz Café album art" loading="lazy">
+          <button class="fav-btn" data-id="6" aria-label="Add to favourites">♡</button>
+          <div class="mood-pill chill-pill">😌 Chill</div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">Smooth Jazz</div>
+          <h3>Jazz Café</h3>
+          <p>Warm saxophones and brushed drums for a Sunday afternoon.</p>
+          <audio controls class="card-audio" preload="none">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="fav-strip" id="favStrip">
+      <span>❤️</span>
+      <span id="favCount">0</span>
+      <span>songs saved to favourites</span>
+      <span class="fav-strip-hint">Click ♡ on any card to save</span>
+    </div>
+  </section>
+
+  <!-- ===== YOUTUBE EMBED ===== -->
+  <section class="video-section">
+    <div class="section-header">
+      <h2 class="section-title">Study With Me</h2>
+      <p class="section-sub">Put it on fullscreen, start the timer, and get in the zone.</p>
+    </div>
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Study with me — lofi session"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.2" stroke="#6c63ff" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+        </svg>
+        <span>Music<em>Hub</em></span>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="about.html">About</a>
+        <a href="learn.html">Learn</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Student Music Hub · Built for 23CSE113</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

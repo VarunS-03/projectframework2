@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Student Music Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.15" stroke="#6c63ff" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="9" stroke="#6c63ff" stroke-width="1.2" fill="none"/>
+        <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+      </svg>
+      <span>Music<em>Hub</em></span>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-btn"><span id="themeIcon">🌙</span></button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <div class="page-hero">
+      <h1>📬 Get in Touch</h1>
+      <p>Song request? Bug report? Just want to say hi? We read every message.</p>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- FORM -->
+      <div class="contact-form-box">
+        <form id="contactForm" action="#" method="post" novalidate>
+          <fieldset class="form-set">
+            <legend>Send a Message</legend>
+
+            <div class="form-group">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Arjun Sharma" autocomplete="name">
+              <span class="err" id="nameErr"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+              <span class="err" id="emailErr"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="">— Pick a topic —</option>
+                <optgroup label="Music">
+                  <option value="song-req">Song Request</option>
+                  <option value="playlist">Playlist Feedback</option>
+                </optgroup>
+                <optgroup label="Site">
+                  <option value="bug">Bug Report</option>
+                  <option value="idea">Feature Idea</option>
+                </optgroup>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                Message <span class="req">*</span>
+                <small id="charCount" class="char-count">0 / 300</small>
+              </label>
+              <textarea
+                id="message" name="message"
+                rows="5" maxlength="300"
+                placeholder="Min 20 characters. Tell us what's on your mind...">
+              </textarea>
+              <span class="err" id="msgErr"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-wrap">
+                <input type="checkbox" name="newsletter" id="newsletter">
+                <span>Notify me when new tracks are added</span>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Send Message ✉️</button>
+              <button type="reset"  class="btn-ghost"  id="resetBtn">Clear</button>
+            </div>
+
+          </fieldset>
+        </form>
+
+        <!-- Success banner, shown by JS after valid submit -->
+        <div class="success-banner" id="successBanner">
+          ✅ Message sent! We'll get back to you within 24 hours.
+        </div>
+      </div>
+
+      <!-- CONTACT INFO SIDEBAR -->
+      <aside class="contact-sidebar">
+
+        <div class="cs-block">
+          <h3>📍 Location</h3>
+          <address>
+            Amrita Vishwa Vidyapeetham<br>
+            Ettimadai, Coimbatore<br>
+            Tamil Nadu — 641112
+          </address>
+        </div>
+
+        <div class="cs-block">
+          <h3>✉️ Email</h3>
+          <p><a href="mailto:cse@cb.amrita.edu">cse@cb.amrita.edu</a></p>
+        </div>
+
+        <div class="cs-block">
+          <h3>🔗 Useful Links</h3>
+          <ul class="sidebar-links">
+            <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">📖 MDN Web Docs</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">🐙 GitHub</a></li>
+            <li><a href="https://www.amrita.edu" target="_blank" rel="noopener">🌐 Amrita University</a></li>
+          </ul>
+        </div>
+
+        <div class="cs-block response-note">
+          <p>⏱ Typical response time: <strong>under 24 hours</strong> on weekdays.</p>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.2" stroke="#6c63ff" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+        </svg>
+        <span>Music<em>Hub</em></span>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Student Music Hub</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn — Student Music Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.15" stroke="#6c63ff" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="9" stroke="#6c63ff" stroke-width="1.2" fill="none"/>
+        <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+      </svg>
+      <span>Music<em>Hub</em></span>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html" class="active">Learn</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-btn"><span id="themeIcon">🌙</span></button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <div class="page-hero">
+      <h1>🧠 Music &amp; The Study Brain</h1>
+      <p>The science behind why the right music makes you study better — and which type to pick.</p>
+    </div>
+
+    <!-- SCIENCE CARDS: 3 up top -->
+    <section class="learn-cards-row">
+      <div class="learn-info-card">
+        <div class="lic-icon">🎼</div>
+        <h3>The Mozart Effect</h3>
+        <p>Studies in the 1990s suggested that listening to Mozart temporarily boosted spatial reasoning scores. While debated, the finding launched decades of research into music and cognition.</p>
+      </div>
+      <div class="learn-info-card">
+        <div class="lic-icon">🧘</div>
+        <h3>Stress &amp; Cortisol</h3>
+        <p>Slow-tempo music (under 60 BPM) measurably reduces cortisol — the stress hormone. This is the science behind our <strong>Sleep</strong> and <strong>Chill</strong> playlists.</p>
+      </div>
+      <div class="learn-info-card">
+        <div class="lic-icon">⚡</div>
+        <h3>Dopamine Release</h3>
+        <p>Music you enjoy triggers dopamine — the same chemical released during rewards. This is why the right track makes a study session feel effortless and motivating.</p>
+      </div>
+    </section>
+
+    <!-- MOOD GUIDE TABLE -->
+    <section class="learn-block">
+      <h2 class="learn-h2">🎯 Which Mood for Which Task?</h2>
+      <div class="table-wrap">
+        <table class="playlist-table">
+          <caption>Recommended music mood by study task type</caption>
+          <thead>
+            <tr>
+              <th rowspan="2">Task Type</th>
+              <!-- colspan: "Recommended" spans Mood + Why -->
+              <th colspan="2">Recommendation</th>
+              <th rowspan="2">Avoid</th>
+            </tr>
+            <tr>
+              <th>Mood</th>
+              <th>Why It Works</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Deep reading / comprehension</strong></td>
+              <td><span class="badge focus-badge">🎯 Focus</span></td>
+              <td>No lyrics, steady rhythm, minimal variation = less distraction</td>
+              <td>Pop with lyrics</td>
+            </tr>
+            <tr>
+              <td><strong>Problem solving / math</strong></td>
+              <td><span class="badge focus-badge">🎯 Focus</span></td>
+              <td>Instrumental ambient maintains alertness without interruption</td>
+              <td>High-energy EDM</td>
+            </tr>
+            <tr>
+              <td><strong>Creative writing / brainstorming</strong></td>
+              <td><span class="badge chill-badge">😌 Chill</span></td>
+              <td>Light jazz or ambient encourages free association thinking</td>
+              <td>Complete silence</td>
+            </tr>
+            <tr>
+              <td><strong>Revision / flashcards</strong></td>
+              <td><span class="badge energy-badge">⚡ Energy</span></td>
+              <td>Moderate upbeat tempo keeps energy high through repetitive tasks</td>
+              <td>Very slow ambient</td>
+            </tr>
+            <tr>
+              <td><strong>Falling asleep / rest</strong></td>
+              <td><span class="badge sleep-badge">🌙 Sleep</span></td>
+              <td>Sub-60 BPM syncs with resting heart rate, reducing arousal</td>
+              <td>Anything with beats</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" class="tfoot-note">
+                ✦ These are research-backed guidelines, not rigid rules. Experiment to find what works for you.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- TIPS LIST SECTION -->
+    <section class="learn-block">
+      <h2 class="learn-h2">💡 5 Tips to Get More from Study Music</h2>
+      <div class="tips-layout">
+
+        <div class="tips-list-wrap">
+          <!-- Ordered list -->
+          <ol class="tips-ol">
+            <li>
+              <strong>Use headphones, not speakers</strong>
+              <p>Headphones create an auditory bubble that dramatically reduces ambient distractions.</p>
+            </li>
+            <li>
+              <strong>Keep volume at 50–60%</strong>
+              <p>Loud music increases cognitive load. Moderate volume is the sweet spot for retention.</p>
+            </li>
+            <li>
+              <strong>Match mood to task, not preference</strong>
+              <p>Your favourite energetic playlist might be wrong for a quiet reading session.</p>
+            </li>
+            <li>
+              <strong>Use the same playlist consistently</strong>
+              <p>Pavlovian conditioning — your brain learns to enter focus mode when it hears familiar tracks.</p>
+            </li>
+            <li>
+              <strong>Take silent breaks every 90 minutes</strong>
+              <p>Silence during breaks helps consolidate memory. Don't music through your rest.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="tips-aside">
+          <!-- Unordered list of genres to avoid -->
+          <h3>❌ Genres to Avoid While Studying</h3>
+          <ul class="avoid-list">
+            <li>🎤 Pop with lyrics — triggers language processing areas</li>
+            <li>📻 Talk radio / podcasts — competes with reading</li>
+            <li>🔊 Heavy metal — elevated cortisol in most listeners</li>
+            <li>🎵 New songs — novelty causes attention shifts</li>
+          </ul>
+
+          <h3 style="margin-top:22px;">✅ Genres That Work Best</h3>
+          <!-- Nested unordered list -->
+          <ul class="work-list">
+            <li>🎹 Instrumental
+              <ul class="nested-list">
+                <li>Piano solos</li>
+                <li>Guitar ambient</li>
+              </ul>
+            </li>
+            <li>🎺 Jazz
+              <ul class="nested-list">
+                <li>Modal jazz</li>
+                <li>Bossa nova</li>
+              </ul>
+            </li>
+            <li>🌿 Nature sounds</li>
+            <li>🎶 Lo-fi hip-hop</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIDEO EMBED: Study with music science -->
+    <section class="learn-block">
+      <h2 class="learn-h2">🎬 Watch: The Science of Music &amp; Focus</h2>
+      <div class="video-frame" style="max-width:680px; margin:0 auto;">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Science of music and studying"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- AUDIO SAMPLE -->
+    <section class="learn-block">
+      <h2 class="learn-h2">🎧 Try a Focus Track Right Now</h2>
+      <div class="audio-showcase">
+        <img
+          src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=320&h=180&fit=crop"
+          alt="Focus music preview"
+          class="audio-thumb"
+          loading="lazy"
+        >
+        <div class="audio-showcase-info">
+          <h3>Deep Focus Flow — Preview</h3>
+          <p>Lo-fi beats at 72 BPM. Instrumental. No lyrics. Try it for 5 minutes and notice the difference.</p>
+          <audio controls class="card-audio" preload="none" style="width:100%; margin-top:12px;">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <a href="playlist.html" class="btn-primary" style="margin-top:16px; display:inline-block;">
+            See Full Playlist →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="15" fill="#6c63ff" opacity="0.2" stroke="#6c63ff" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="3.5" fill="#6c63ff"/>
+        </svg>
+        <span>Music<em>Hub</em></span>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Student Music Hub</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
